@@ -10,6 +10,12 @@ import ReuseableForm from './components/ReuseableForm'
 
 
 function App() {
+  const handleSignUpSubmit = data => {
+    console.log('singn up', data)
+  }
+  const handleUpdateProfile = data => {
+    console.log('update profile', data)
+  }
   return (
     <>     
       <h1>Vite + React</h1>
@@ -17,8 +23,14 @@ function App() {
      {/* <StatefullForm></StatefullForm> */}
      {/* <RefForm></RefForm> */}
      {/* <HookForm></HookForm> */}
-     <ReuseableForm formTitle={'Sign Up'}></ReuseableForm>
-     <ReuseableForm formTitle={'Profile Update'} submitBtnText={'Update'}></ReuseableForm>
+     <ReuseableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}>
+      <h2>Sign Up</h2>
+      <p>Please sign up here.</p>
+     </ReuseableForm>
+     <ReuseableForm formTitle={'Profile Update'} submitBtnText={'Update'} handleSubmit={handleUpdateProfile}>
+     <h2>Update Profile</h2>
+      <p>Please always keep update your profile.</p>
+     </ReuseableForm>
     
     </>
   )

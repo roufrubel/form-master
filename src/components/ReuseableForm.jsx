@@ -1,16 +1,22 @@
 
 
-const ReuseableForm = ({formTitle, handleOnSubmit, submitBtnText='Submit'}) => {
+const ReuseableForm = ({formTitle, handleSubmit, submitBtnText='Submit', children}) => {
 
-    // const handleOnSubmit = e => {
-    //     e.preventDefault();
-    // }
+    const handleLocalSubmit = e => {
+        e.preventDefault();
+        const data = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            password: e.target.password.value
+        }
+        handleSubmit(data);
+    }
 
     return (
         <>
-        <h2>{formTitle}</h2>
+        {children}
         <div className="bg-slate-200 p-6">
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={handleLocalSubmit}>
           <input type="text" name="name" id="" /><br /><br/>
           <input  type="email" name="email" id="" /><br /><br/>
           <input type="password" name="password" id="" /> <br /><br/>
