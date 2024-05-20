@@ -1,6 +1,7 @@
 
 import './App.css'
-import HookForm from './components/HookForm'
+// import HookForm from './components/HookForm'
+import ReuseableForm from './components/ReuseableForm'
 // import RefForm from './components/RefForm'
 
 // import SimpleForm from './components/SimpleForm'
@@ -15,7 +16,9 @@ function App() {
      {/* <SimpleForm></SimpleForm> */}
      {/* <StatefullForm></StatefullForm> */}
      {/* <RefForm></RefForm> */}
-     <HookForm></HookForm>
+     {/* <HookForm></HookForm> */}
+     <ReuseableForm formTitle={'Sign Up'}></ReuseableForm>
+     <ReuseableForm formTitle={'Profile Update'} submitBtnText={'Update'}></ReuseableForm>
     
     </>
   )
