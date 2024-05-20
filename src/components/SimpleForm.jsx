@@ -12,7 +12,7 @@ const SimpleForm = () => {
         <form onSubmit={handleOnSubmit}>
           <input type="text" name="name" id="" /><br /><br/>
           <input  type="email" name="email" id="" /><br /><br/>
-          <input type="password" name="password" id="" /> <br />
+          <input type="password" name="password" id="" /> <br /><br/>
           <input type="submit" value="Submit" />
         </form>
       </div>
